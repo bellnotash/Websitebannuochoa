@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Admin - Website Bán Nước Hoa</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="index.html">Logo</a>
+                </div>
+                <ul class="menu">
+                    <li><a href="admin.html">Quản lý đơn hàng</a></li>
+                    <li><a href="admin-products.html">Quản lý sản phẩm</a></li>
+                    <li><a href="index.html">Về trang chủ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="admin-page">
+        <div class="container">
+            <h1>Quản lý đơn hàng</h1>
+            <div class="order-filters">
+                <select id="status-filter">
+                    <option value="all">Tất cả trạng thái</option>
+                    <option value="pending">Chờ xử lý</option>
+                    <option value="processing">Đang xử lý</option>
+                    <option value="shipped">Đã giao hàng</option>
+                    <option value="completed">Hoàn thành</option>
+                    <option value="cancelled">Đã hủy</option>
+                </select>
+                <input type="date" id="date-filter">
+            </div>
+            <table class="order-table">
+                <thead>
+                    <tr>
+                        <th>Mã đơn hàng</th>
+                        <th>Ngày đặt</th>
+                        <th>Khách hàng</th>
+                        <th>Tổng tiền</th>
+                        <th>Trạng thái</th>
+                        <th>Hành động</th>
+                    </tr>
+                </thead>
+                <tbody id="order-list">
+                    <!-- Danh sách đơn hàng sẽ được thêm vào đây bằng JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Về chúng tôi</h3>
+                    <p>Chúng tôi cung cấp các loại nước hoa cao cấp với mùi hương độc đáo.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Liên kết nhanh</h3>
+                    <ul>
+                        <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="products.html">Sản phẩm</a></li>
+                        <li><a href="about.html">Về chúng tôi</a></li>
+                        <li><a href="contact.html">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Liên hệ</h3>
+                    <p>Email: info@perfumeshop.com</p>
+                    <p>Điện thoại: 123-456-7890</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Website Bán Nước Hoa. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/admin.js" type="module"></script>
+</body>
+</html>

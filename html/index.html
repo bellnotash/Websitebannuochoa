@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Khám phá bộ sưu tập nước hoa độc đáo và cao cấp tại cửa hàng trực tuyến của chúng tôi.">
+    <title>Website Bán Nước Hoa</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="index.html">Logo</a>
+                </div>
+                <form class="search-form">
+                    <input type="text" placeholder="Tìm kiếm sản phẩm..." id="search-input">
+                    <button type="submit">🔍</button>
+                </form>
+                <ul class="menu">
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="products.html">Sản phẩm</a></li>
+                    <li><a href="about.html">Về chúng tôi</a></li>
+                    <li><a href="contact.html">Liên hệ</a></li>
+                </ul>
+                <div class="cart">
+                    <a href="cart.html" class="cart-icon" data-count="0">🛒</a>
+                </div>
+                <div class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Khám phá hương thơm độc đo</h1>
+                <p>Bộ sưu tập nước hoa cao cấp dành cho bạn</p>
+                <a href="products.html" class="btn">Mua ngay</a>
+            </div>
+        </section>
+
+        <section class="featured-products">
+            <div class="container">
+                <h2>Sản phẩm nổi bật</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="images/perfume1.jpg" alt="Nước hoa 1">
+                        <h3>Hương Thơm Quyến Rũ</h3>
+                        <p class="price">1.200.000đ</p>
+                        <a href="#" class="btn">Thêm vào giỏ</a>
+                    </div>
+                    <div class="product-card">
+                        <img src="images/perfume2.jpg" alt="Nước hoa 2">
+                        <h3>Hương Hoa Cỏ</h3>
+                        <p class="price">980.000đ</p>
+                        <a href="#" class="btn">Thêm vào giỏ</a>
+                    </div>
+                    <!-- Thêm 2 sản phẩm nữa tương tự -->
+                </div>
+            </div>
+        </section>
+
+        <section class="categories">
+            <div class="container">
+                <h2>Danh mục sản phẩm</h2>
+                <div class="category-grid">
+                    <a href="#" class="category-card">
+                        <img src="images/category-men.jpg" alt="Nam">
+                        <h3>Nước hoa Nam</h3>
+                    </a>
+                    <a href="#" class="category-card">
+                        <img src="images/category-women.jpg" alt="Nữ">
+                        <h3>Nước hoa Nữ</h3>
+                    </a>
+                    <a href="#" class="category-card">
+                        <img src="images/category-unisex.jpg" alt="Unisex">
+                        <h3>Nước hoa Unisex</h3>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Về chúng tôi</h3>
+                    <p>Chúng tôi cung cấp các loại nước hoa cao cấp với mùi hương độc đáo.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Liên kết nhanh</h3>
+                    <ul>
+                        <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="products.html">Sản phẩm</a></li>
+                        <li><a href="about.html">Về chúng tôi</a></li>
+                        <li><a href="contact.html">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Liên hệ</h3>
+                    <p>Email: info@perfumeshop.com</p>
+                    <p>Điện thoại: 123-456-7890</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Website Bán Nước Hoa. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="../js/script.js"></script>
+<script src="../js/cart.js" type="module"></script>
+<script src="../js/main.js"></script>
+<script src="../js/search.js" type="module"></script>
+<script src="../js/mobile-menu.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var lazyImages = [].slice.call(document.querySelectorAll("img.lazy-load"));
+
+        if ("IntersectionObserver" in window) {
+            let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        let lazyImage = entry.target;
+                        lazyImage.src = lazyImage.dataset.src;
+                        lazyImage.classList.remove("lazy-load");
+                        lazyImageObserver.unobserve(lazyImage);
+                    }
+                });
+            });
+
+            lazyImages.forEach(function(lazyImage) {
+                lazyImageObserver.observe(lazyImage);
+            });
+        }
+    });
+</script>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Khám phá bộ sưu tập nước hoa độc đáo và cao cấp tại cửa hàng trực tuyến của chúng tôi.">
+    <title>Giỏ hàng - Website Bán Nước Hoa</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/cart.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="index.html">Logo</a>
+                </div>
+                <form class="search-form">
+                    <input type="text" placeholder="Tìm kiếm sản phẩm..." id="search-input">
+                    <button type="submit">🔍</button>
+                </form>
+                <ul class="menu">
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="products.html">Sản phẩm</a></li>
+                    <li><a href="about.html">Về chúng tôi</a></li>
+                    <li><a href="contact.html">Liên hệ</a></li>
+                </ul>
+                <div class="cart">
+                    <a href="cart.html" class="cart-icon" data-count="0">🛒</a>
+                </div>
+                <div class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="cart-page">
+        <div class="container">
+            <h1>Giỏ hàng của bạn</h1>
+            <div class="cart-content">
+                <div class="cart-items">
+                    <!-- Các sản phẩm trong giỏ hàng sẽ được thêm vào đây bằng JavaScript -->
+                </div>
+                <div class="cart-summary">
+                    <h2>Tổng cộng</h2>
+                    <div class="summary-item">
+                        <span>Tạm tính:</span>
+                        <span class="subtotal">0đ</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Phí vận chuyển:</span>
+                        <span class="shipping">0đ</span>
+                    </div>
+                    <div class="summary-item total">
+                        <span>Tổng cộng:</span>
+                        <span class="total-price">0đ</span>
+                    </div>
+                    <button class="btn checkout-btn" onclick="window.location.href='checkout.html'">Tiến hành thanh toán</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Về chúng tôi</h3>
+                    <p>Chúng tôi cung cấp các loại nước hoa cao cấp với mùi hương độc đáo.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Liên kết nhanh</h3>
+                    <ul>
+                        <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="products.html">Sản phẩm</a></li>
+                        <li><a href="about.html">Về chúng tôi</a></li>
+                        <li><a href="contact.html">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Liên hệ</h3>
+                    <p>Email: info@perfumeshop.com</p>
+                    <p>Điện thoại: 123-456-7890</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Website Bán Nước Hoa. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/cart.js" type="module"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/search.js" type="module"></script>
+    <script src="../js/mobile-menu.js"></script>
+</body>
+</html>

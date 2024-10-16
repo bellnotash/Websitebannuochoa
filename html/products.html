@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Khám phá bộ sưu tập nước hoa độc đáo và cao cấp tại cửa hàng trực tuyến của chúng tôi.">
+    <title>Sản phẩm - Website Bán Nước Hoa</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/products.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="index.html">Logo</a>
+                </div>
+                <form class="search-form">
+                    <input type="text" placeholder="Tìm kiếm sản phẩm..." id="search-input">
+                    <button type="submit">🔍</button>
+                </form>
+                <ul class="menu">
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="products.html">Sản phẩm</a></li>
+                    <li><a href="about.html">Về chúng tôi</a></li>
+                    <li><a href="contact.html">Liên hệ</a></li>
+                </ul>
+                <div class="cart">
+                    <a href="cart.html" class="cart-icon" data-count="0">🛒</a>
+                </div>
+                <div class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="products-page">
+        <div class="container">
+            <h1>Sản phẩm</h1>
+            <div class="products-layout">
+                <aside class="product-filters">
+                    <h2>Bộ lọc</h2>
+                    <form id="filter-form">
+                        <div class="filter-group">
+                            <h3>Danh mục</h3>
+                            <label><input type="checkbox" name="category" value="nam"> Nước hoa nam</label>
+                            <label><input type="checkbox" name="category" value="nu"> Nước hoa nữ</label>
+                            <label><input type="checkbox" name="category" value="unisex"> Nước hoa unisex</label>
+                        </div>
+                        <div class="filter-group">
+                            <h3>Giá</h3>
+                            <input type="range" id="price-range" min="0" max="10000000" step="100000">
+                            <div class="price-inputs">
+                                <input type="number" id="min-price" placeholder="Giá thấp nhất">
+                                <input type="number" id="max-price" placeholder="Giá cao nhất">
+                            </div>
+                        </div>
+                        <div class="filter-group">
+                            <h3>Thương hiệu</h3>
+                            <label><input type="checkbox" name="brand" value="chanel"> Chanel</label>
+                            <label><input type="checkbox" name="brand" value="dior"> Dior</label>
+                            <label><input type="checkbox" name="brand" value="gucci"> Gucci</label>
+                            <!-- Thêm các thương hiệu khác -->
+                        </div>
+                        <button type="submit" class="btn">Áp dụng</button>
+                    </form>
+                </aside>
+                <section class="product-list">
+                    <div class="product-grid">
+                        <!-- Product cards will be dynamically inserted here -->
+                    </div>
+                    <div class="pagination">
+                        <!-- Pagination will be dynamically inserted here -->
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Về chúng tôi</h3>
+                    <p>Chúng tôi cung cấp các loại nước hoa cao cấp với mùi hương độc đáo.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Liên kết nhanh</h3>
+                    <ul>
+                        <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="products.html">Sản phẩm</a></li>
+                        <li><a href="about.html">Về chúng tôi</a></li>
+                        <li><a href="contact.html">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Liên hệ</h3>
+                    <p>Email: info@perfumeshop.com</p>
+                    <p>Điện thoại: 123-456-7890</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Website Bán Nước Hoa. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/products.js"></script>
+    <script src="../js/cart.js" type="module"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/search.js" type="module"></script>
+    <script src="../js/mobile-menu.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var lazyImages = [].slice.call(document.querySelectorAll("img.lazy-load"));
+
+            if ("IntersectionObserver" in window) {
+                let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            let lazyImage = entry.target;
+                            lazyImage.src = lazyImage.dataset.src;
+                            lazyImage.classList.remove("lazy-load");
+                            lazyImageObserver.unobserve(lazyImage);
+                        }
+                    });
+                });
+
+                lazyImages.forEach(function(lazyImage) {
+                    lazyImageObserver.observe(lazyImage);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

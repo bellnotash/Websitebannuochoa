@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý tài khoản - Website Bán Nước Hoa</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/account.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="index.html">Logo</a>
+                </div>
+                <form class="search-form">
+                    <input type="text" placeholder="Tìm kiếm sản phẩm..." id="search-input">
+                    <button type="submit">🔍</button>
+                </form>
+                <ul class="menu">
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="products.html">Sản phẩm</a></li>
+                    <li><a href="about.html">Về chúng tôi</a></li>
+                    <li><a href="contact.html">Liên hệ</a></li>
+                </ul>
+                <div class="cart">
+                    <a href="cart.html" class="cart-icon" data-count="0">🛒</a>
+                </div>
+                <div class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="account-page">
+        <div class="container">
+            <h1>Quản lý tài khoản</h1>
+            <div class="account-content">
+                <div class="account-info">
+                    <h2>Thông tin cá nhân</h2>
+                    <form id="account-form">
+                        <div class="form-group">
+                            <label for="account-name">Họ tên:</label>
+                            <input type="text" id="account-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="account-email">Email:</label>
+                            <input type="email" id="account-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="account-phone">Số điện thoại:</label>
+                            <input type="tel" id="account-phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="account-address">Địa chỉ:</label>
+                            <textarea id="account-address"></textarea>
+                        </div>
+                        <button type="submit" class="btn">Cập nhật thông tin</button>
+                    </form>
+                </div>
+                <div class="order-history">
+                    <h2>Lịch sử đơn hàng</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Mã đơn hàng</th>
+                                <th>Ngày đặt</th>
+                                <th>Tổng tiền</th>
+                                <th>Trạng thái</th>
+                            </tr>
+                        </thead>
+                        <tbody id="order-history-list">
+                            <!-- Danh sách đơn hàng sẽ được thêm vào đây bằng JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Về chúng tôi</h3>
+                    <p>Chúng tôi cung cấp các loại nước hoa cao cấp với mùi hương độc đáo.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Liên kết nhanh</h3>
+                    <ul>
+                        <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="products.html">Sản phẩm</a></li>
+                        <li><a href="about.html">Về chúng tôi</a></li>
+                        <li><a href="contact.html">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Liên hệ</h3>
+                    <p>Email: info@perfumeshop.com</p>
+                    <p>Điện thoại: 123-456-7890</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Website Bán Nước Hoa. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/account.js"></script>
+</body>
+</html>

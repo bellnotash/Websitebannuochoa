@@ -1,0 +1,39 @@
+.auth-page {
+    padding: 2rem 0;
+}
+
+.auth-forms {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.login-form,
+.register-form {
+    flex: 1;
+    background-color: #f8f8f8;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+    .auth-forms {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,20 @@
+.about-page {
+    padding: 2rem 0;
+}
+
+.about-page h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.about-content, .our-mission {
+    margin-bottom: 2rem;
+}
+
+.about-content h2, .our-mission h2 {
+    margin-bottom: 1rem;
+}
+
+.about-content p, .our-mission p {
+    line-height: 1.6;
+}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Khám phá bộ sưu tập nước hoa độc đáo và cao cấp tại cửa hàng trực tuyến của chúng tôi.">
+    <title>Chi tiết sản phẩm - Website Bán Nước Hoa</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/product-detail.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="index.html">Logo</a>
+                </div>
+                <form class="search-form">
+                    <input type="text" placeholder="Tìm kiếm sản phẩm..." id="search-input">
+                    <button type="submit">🔍</button>
+                </form>
+                <ul class="menu">
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="products.html">Sản phẩm</a></li>
+                    <li><a href="about.html">Về chúng tôi</a></li>
+                    <li><a href="contact.html">Liên hệ</a></li>
+                </ul>
+                <div class="cart">
+                    <a href="cart.html" class="cart-icon" data-count="0">🛒</a>
+                </div>
+                <div class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="product-detail">
+        <div class="container">
+            <div class="product-layout">
+                <div class="product-images">
+                    <img src="images/perfume1.jpg" alt="Tên sản phẩm" class="main-image">
+                    <div class="thumbnail-images">
+                        <img src="images/perfume1-thumb1.jpg" alt="Thumbnail 1">
+                        <img src="images/perfume1-thumb2.jpg" alt="Thumbnail 2">
+                        <img src="images/perfume1-thumb3.jpg" alt="Thumbnail 3">
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h1 class="product-title">Tên sản phẩm</h1>
+                    <p class="product-brand">Thương hiệu: <span>Chanel</span></p>
+                    <p class="product-price">1.200.000đ</p>
+                    <div class="product-description">
+                        <h2>Mô tả sản phẩm</h2>
+                        <p>Đây là mô tả chi tiết về sản phẩm nước hoa...</p>
+                    </div>
+                    <div class="product-actions">
+                        <input type="number" id="quantity" value="1" min="1">
+                        <button class="btn add-to-cart">Thêm vào giỏ hàng</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-details">
+                <h2>Thông tin chi tiết</h2>
+                <table>
+                    <tr>
+                        <th>Dung tích</th>
+                        <td>100ml</td>
+                    </tr>
+                    <tr>
+                        <th>Nồng độ</th>
+                        <td>Eau de Parfum</td>
+                    </tr>
+                    <tr>
+                        <th>Nhóm hương</th>
+                        <td>Hương hoa cỏ</td>
+                    </tr>
+                    <!-- Thêm các thông tin khác -->
+                </table>
+            </div>
+            <div class="related-products">
+                <h2>Sản phẩm liên quan</h2>
+                <div class="product-grid">
+                    <!-- Sẽ được thêm bằng JavaScript -->
+                </div>
+            </div>
+            <!-- Thêm phần này vào cuối trang chi tiết sản phẩm -->
+            <div class="product-reviews">
+                <h2>Đánh giá sản phẩm</h2>
+                <div id="reviews-list">
+                    <!-- Danh sách đánh giá sẽ được thêm vào đây bằng JavaScript -->
+                </div>
+                <form id="review-form">
+                    <h3>Thêm đánh giá của bạn</h3>
+                    <div class="form-group">
+                        <label for="review-name">Tên của bạn:</label>
+                        <input type="text" id="review-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="review-rating">Đánh giá:</label>
+                        <select id="review-rating" required>
+                            <option value="5">5 sao</option>
+                            <option value="4">4 sao</option>
+                            <option value="3">3 sao</option>
+                            <option value="2">2 sao</option>
+                            <option value="1">1 sao</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="review-comment">Nhận xét:</label>
+                        <textarea id="review-comment" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Gửi đánh giá</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Về chúng tôi</h3>
+                    <p>Chúng tôi cung cấp các loại nước hoa cao cấp với mùi hương độc đáo.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Liên kết nhanh</h3>
+                    <ul>
+                        <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="products.html">Sản phẩm</a></li>
+                        <li><a href="about.html">Về chúng tôi</a></li>
+                        <li><a href="contact.html">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Liên hệ</h3>
+                    <p>Email: info@perfumeshop.com</p>
+                    <p>Điện thoại: 123-456-7890</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Website Bán Nước Hoa. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/product-detail.js"></script>
+    <script src="../js/cart.js" type="module"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/search.js" type="module"></script>
+    <script src="../js/mobile-menu.js"></script>
+</body>
+</html>
